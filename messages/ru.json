@@ -4,7 +4,7 @@
         "description": "Платформа сейчас находится в разработке. Сразу сообщаем, когда закончим!"
     },
     "Switchers": {
-        "locale": "{locale, select, kz {Қазақша} ru {Русский} en {English} other {Unknown}}",
+        "locale": "{locale, select, kk {Қазақша} ru {Русский} en {English} other {Unknown}}",
         "theme": {
             "light": "Светлый",
             "dark": "Темный",
