@@ -41,6 +41,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     return (
         <html lang={locale} className={interTight.className} suppressHydrationWarning>
             <body className="text-sm overflow-hidden">
+
                 <NextIntlClientProvider>
                     <ThemeProvider
                         attribute="class"
@@ -48,7 +49,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                         enableSystem
                         disableTransitionOnChange
                     >
-                        {children}
+                            {children}
                     </ThemeProvider>
                 </NextIntlClientProvider>
             </body>

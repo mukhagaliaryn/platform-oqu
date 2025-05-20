@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-export default function MainPage() {
+export default function HomePage() {
     const t = useTranslations('MainPage');
 
     return (
@@ -36,11 +36,11 @@ export default function MainPage() {
                     </div>
 
                     <div className="flex items-center justify-center gap-2 md:gap-4">
-                        <Link href={"/"}>
-                            <Button variant={"default"}>Бастап көр</Button>
+                        <Link href={"/register"}>
+                            <Button variant={"default"}>{t('section1.actions.button1')}</Button>
                         </Link>
-                        <Link href={"/"}>
-                            <Button variant={"outline"}>Онлайн курстар</Button>
+                        <Link href={"/courses"}>
+                            <Button variant={"outline"}>{t('section1.actions.button2')}</Button>
                         </Link>
                     </div>
                 </div>
@@ -50,41 +50,41 @@ export default function MainPage() {
             {/* Section 2 */}
             <div className="w-full border-t">
                 <div className="max-w-screen-xl w-full mx-auto px-4 py-16 grid gap-4 md:gap-8">
-                    <h1 className="text-xl md:text-2xl text-center font-medium">Неге OQU платформасымен оқуым керек?</h1>
+                    <h1 className="text-xl md:text-2xl text-center font-medium">{t('section2.title')}</h1>
 
                     <div className="flex flex-wrap justify-center gap-4">
                         <div className="flex flex-col gap-4 items-center p-4 max-w-xs">
                             <div className="bg-secondary p-6 rounded-xl">
-                                <Languages size={64} />
+                                <Languages size={48} />
                             </div>
                             <div className="text-center">
-                                <h1 className="text-xl">Қазақ тіліндегі контент</h1>
+                                <h1 className="text-xl">{t('section2.features.item1.title')}</h1>
                                 <span className="text-muted-foreground">
-                                    Барлық курстар – <b className="font-semibold">қазақ тілінде</b>, түсінікті, заманауи әдіспен түсіндірілген.
+                                    <div dangerouslySetInnerHTML={{__html: t.raw('section2.features.item1.subtitle')}} />
                                 </span>
                             </div>
                         </div>
 
                         <div className="flex flex-col gap-4 items-center p-4 max-w-xs">
                             <div className="bg-secondary p-6 rounded-xl">
-                                <SlidersHorizontal size={64} />
+                                <SlidersHorizontal size={48} />
                             </div>
                             <div className="text-center">
-                                <h1 className="text-xl">Интерактивті сабақтар</h1>
+                                <h1 className="text-xl">{t('section2.features.item2.title')}</h1>
                                 <span className="text-muted-foreground">
-                                    <b className="font-semibold">Видео, квиз, тапсырма</b> — барлығы білімді бекітуге бағытталған.
+                                    <div dangerouslySetInnerHTML={{__html: t.raw('section2.features.item2.subtitle')}} />
                                 </span>
                             </div>
                         </div>
 
                         <div className="flex flex-col gap-4 items-center p-4 max-w-xs">
                             <div className="bg-secondary p-6 rounded-xl">
-                                <ChartColumn size={64} />
+                                <ChartColumn size={48} />
                             </div>
                             <div className="text-center">
-                                <h1 className="text-xl">Оқу барысын бақылау</h1>
+                                <h1 className="text-xl">{t('section2.features.item3.title')}</h1>
                                 <span className="text-muted-foreground">
-                                    <b className="font-semibold">Прогресті қадағалау</b>, қай бөлім қиын – соған қайта оралу мүмкіндігі бар.
+                                    <div dangerouslySetInnerHTML={{__html: t.raw('section2.features.item3.subtitle')}} />
                                 </span>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ export default function MainPage() {
             {/* Section 3 */}
             <div className="w-full border-t">
                 <div className="max-w-screen-xl mx-auto py-16 px-4 grid gap-4 md:gap-8">
-                    <h1 className="text-xl md:text-2xl text-center font-medium">Онлайн курстар</h1>
+                    <h1 className="text-xl md:text-2xl text-center font-medium">{t('section3.title')}</h1>
 
                     <Carousel
                         opts={{
@@ -124,7 +124,7 @@ export default function MainPage() {
 
                     <div className="flex justify-center">
                         <Link href={"/"}>
-                            <Button variant={"default"}>Толығырақ қарап шығу</Button>
+                            <Button variant={"default"}>{t('section3.action')}</Button>
                         </Link>
                     </div>
                 </div>
@@ -133,7 +133,7 @@ export default function MainPage() {
             {/* Section 4 */}
             <div className="w-full border-t">
                 <div className="max-w-screen-xl mx-auto py-16 px-4 grid grid-4 md:gap-8">
-                    <h1 className="text-xl md:text-2xl text-center font-medium">Соңғы жаңалықтар</h1>
+                    <h1 className="text-xl md:text-2xl text-center font-medium">{t('section4.title')}</h1>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                         {/* Items */}
@@ -152,7 +152,7 @@ export default function MainPage() {
                             </div>
 
                             <div className="flex gap-2 items-center">
-                                <div className="w-5 h-5 rounded-full bg-muted-foreground"></div>
+                                <div className="w-5 h-5 rounded-full bg-secondary"></div>
                                 <span className="text-muted-foreground">OQU labs</span>
                             </div>
                         </div>
@@ -172,7 +172,7 @@ export default function MainPage() {
                             </div>
 
                             <div className="flex gap-2 items-center">
-                                <div className="w-5 h-5 rounded-full bg-muted-foreground"></div>
+                                <div className="w-5 h-5 rounded-full bg-secondary"></div>
                                 <span className="text-muted-foreground">OQU labs</span>
                             </div>
                         </div>
@@ -192,7 +192,7 @@ export default function MainPage() {
                             </div>
 
                             <div className="flex gap-2 items-center">
-                                <div className="w-5 h-5 rounded-full bg-muted-foreground"></div>
+                                <div className="w-5 h-5 rounded-full bg-secondary"></div>
                                 <span className="text-muted-foreground">OQU labs</span>
                             </div>
                         </div>
@@ -200,7 +200,7 @@ export default function MainPage() {
 
                     <div className="flex justify-center">
                         <Link href={"/"}>
-                            <Button variant={"default"}>Толығырақ қарап шығу</Button>
+                            <Button variant={"default"}>{t('section4.action')}</Button>
                         </Link>
                     </div>
                 </div>

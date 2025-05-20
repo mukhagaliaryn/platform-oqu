@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 
-export default function AboutPage() {
-    const t = useTranslations('AboutPage');
+export default function NewsPage() {
+    const t = useTranslations('NewsPage');
 
     return (
         <MainLayout>
@@ -16,6 +16,5 @@ export default function AboutPage() {
                 </div>
             </div>
         </MainLayout>
-
     );
 }
