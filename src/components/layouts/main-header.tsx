@@ -13,7 +13,6 @@ export function MainHeader() {
     const t = useTranslations("MainLayout.header");
     const pathname = usePathname();
     const locale = useLocale();
-    
 
     return (
         <div className="sticky top-0 z-40 w-full border-b bg-white/70 dark:bg-black/70 backdrop-blur-2xl">
@@ -24,13 +23,13 @@ export function MainHeader() {
                             src={`/full-light.svg`}
                             width={329} height={105}
                             alt="OQU platforms logo"
-                            className="w-20 dark:hidden"
+                            className="w-16 md:w-20 dark:hidden"
                         />
                         <Image
                             src={`/full-dark.svg`}
                             width={329} height={105}
                             alt="OQU platforms logo"
-                            className="w-20 hidden dark:block"
+                            className="w-16 md:w-20 hidden dark:block"
                         />
                     </Link>
 
@@ -41,8 +40,8 @@ export function MainHeader() {
                         <Link href={"/courses"}>
                             <Button variant={pathname === `/${locale}/courses` ? "secondary" : "ghost"} className="text-muted-foreground">{t("nav.courses")}</Button>
                         </Link>
-                        <Link href={"/news"}>
-                            <Button variant={pathname === `/${locale}/news` ? "secondary" : "ghost"} className="text-muted-foreground">{t("nav.news")}</Button>
+                        <Link href={"/blog"}>
+                            <Button variant={pathname === `/${locale}/blog` ? "secondary" : "ghost"} className="text-muted-foreground">{t("nav.news")}</Button>
                         </Link>
                     </nav>
                 </div>

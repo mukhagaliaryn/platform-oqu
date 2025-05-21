@@ -40,7 +40,7 @@ export function MainFooter() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={"/"}>
+                                <Link href={"/courses"}>
                                     <Button variant={"link"} className="text-muted-foreground">{t("nav.resources.l2")}</Button>
                                 </Link>
                             </li>
@@ -51,7 +51,7 @@ export function MainFooter() {
                         <h1 className="text-base font-medium ml-4">{t("nav.about.title")}</h1>
                         <ul>
                             <li>
-                                <Link href={"/news"}>
+                                <Link href={"/blog"}>
                                     <Button variant={"link"} className="text-muted-foreground">{t("nav.about.l1")}</Button>
                                 </Link>
                             </li>
