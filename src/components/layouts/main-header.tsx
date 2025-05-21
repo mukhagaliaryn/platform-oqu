@@ -2,7 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from '@/i18n/navigation';
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { AlignLeft } from "lucide-react";
