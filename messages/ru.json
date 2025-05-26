@@ -86,5 +86,70 @@
         "links": {
             "home": "Главная"
         }
+    },
+    "LoginPage": {
+        "form": {
+            "title": "Войти",
+            "description": "Зарегистрированный эл.почты и пароля",
+            "email": {
+                "label": "Электронная почта",
+                "placeholder": "m@example.com"
+            },
+            "password": {
+                "label": "Пароль",
+                "forgotLink": "Сброс пароля"
+            },
+            "actions": {
+                "submit": "Войти в систему",
+                "google": "Войти через Google",
+                "registerAction": "Если нет аккаунта",
+                "register": "Регистрация"
+            }
+        }
+    },
+    "RegisterPage": {
+        "form": {
+            "title": "Регистрация",
+            "description": "Зарегистрируйтесь, чтобы воспользоваться возможностями платформы!",
+            "email": {
+                "label": "Электронная почта",
+                "placeholder": "m@example.com"
+            },
+            "username": {
+                "label": "Имя пользователя",
+                "placeholder": "@username"
+            },
+            "fullName": {
+                "label": "Полное имя",
+                "placeholder": "Имя и фамилия"
+            },
+            "password": {
+                "label": "Пароль"
+            },
+            "rePassword": {
+                "label": "Повторить пароль"
+            },
+            "actions": {
+                "submit": "Регистрация",
+                "google": "Регистрация через Google",
+                "registerAction": "Если есть аккаунт",
+                "register": "Войти"
+            }
+        }
+    },
+    "PasswordResetPage": {
+        "form": {
+            "title": "Сброс пароля",
+            "description": "Сообщение отправляется зарегистрированный эл.почте",
+            "email": {
+                "label": "Электронная почта",
+                "placeholder": "m@example.com"
+            },
+            "actions": {
+                "submit": "Отправить",
+                "registerAction": "Если есть аккаунт",
+                "register": "Войти"
+            }
+        }
     }
 }

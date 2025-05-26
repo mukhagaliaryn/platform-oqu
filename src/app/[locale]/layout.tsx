@@ -40,7 +40,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
     return (
         <html lang={locale} className={interTight.className} suppressHydrationWarning>
-            <body className="text-sm overflow-hidden">
+            <body className="text-sm overflow-hidden bg-accent">
 
                 <NextIntlClientProvider>
                     <ThemeProvider

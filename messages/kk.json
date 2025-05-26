@@ -86,5 +86,70 @@
         "links": {
             "home": "Басты бет"
         }
+    },
+    "LoginPage": {
+        "form": {
+            "title": "Жүйеге кіру",
+            "description": "Тіркелген эл.пошта мен парольді жазып кіру",
+            "email": {
+                "label": "Электронды пошта",
+                "placeholder": "m@example.com"
+            },
+            "password": {
+                "label": "Пароль",
+                "forgotLink": "Парольді қалпына келтіру"
+            },
+            "actions": {
+                "submit": "Жүйеге кіру",
+                "google": "Google арқылу кіру",
+                "registerAction": "Егер аккаунт жоқ болса",
+                "register": "Регистрация"
+            }
+        }
+    },
+    "RegisterPage": {
+        "form": {
+            "title": "Регистрация",
+            "description": "Платформаның мүмкіндіктерін пайдалану үшін тіркел!",
+            "email": {
+                "label": "Электронды пошта",
+                "placeholder": "m@example.com"
+            },
+            "username": {
+                "label": "Латынша лақап аты",
+                "placeholder": "@username"
+            },
+            "fullName": {
+                "label": "Толық аты-жөні",
+                "placeholder": "Есімі мен тегі"
+            },
+            "password": {
+                "label": "Пароль"
+            },
+            "rePassword": {
+                "label": "Парольді қайталау"
+            },
+            "actions": {
+                "submit": "Регистрация",
+                "google": "Google арқылу тіркелу",
+                "registerAction": "Егер аккаунт бар болса",
+                "register": "Жүйеге кіру"
+            }
+        }
+    },
+    "PasswordResetPage": {
+        "form": {
+            "title": "Парольді қалпына келтіру",
+            "description": "Тіркелген эл.пошта арқылы хабарлама жіберіледі",
+            "email": {
+                "label": "Электронды пошта",
+                "placeholder": "m@example.com"
+            },
+            "actions": {
+                "submit": "Жіберу",
+                "registerAction": "Егер аккаунт бар болса",
+                "register": "Жүйеге кіру"
+            }
+        }
     }
 }

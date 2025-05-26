@@ -10,7 +10,7 @@ type Props = {
 
 export default function MainLayout({ children }: Props) {
     return (
-        <div className="h-screen overflow-auto flex flex-col">
+        <div className="h-screen overflow-auto flex flex-col bg-background">
             <div className="flex-1">
                 <MainHeader />
 
