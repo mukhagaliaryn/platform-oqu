@@ -1,12 +1,13 @@
 "use client"
-import { BlogProps } from "@/app/[locale]/(main)/blog/page"
+
+import { BlogCategoryProps } from "@/app/[locale]/(main)/blog/category/[slug]/page";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl"
 import { usePathname } from "next/navigation";
 
 
-export function BlogContainer({ blogs, categories }: BlogProps) {
+export function BlogCategoryContainer({ category, categories, blogs }: BlogCategoryProps) {
     const locale = useLocale();
     const pathname = usePathname();
 
@@ -14,20 +15,20 @@ export function BlogContainer({ blogs, categories }: BlogProps) {
         <>
             <div className="max-w-screen-xl mx-auto py-8 md:py-16 px-4 md:px-0 grid gap-8">
                 <div className="flex justify-between">
-                    <h1 className="text-2xl font-medium">Жаңалықтар.</h1>
-
+                    <h1 className="text-2xl font-medium">{category.name}.</h1>
+                    
                     <div className="flex gap-2 items-center">
                         <Link href={`/blog`}>
                             <Button variant={pathname === `/${locale}/blog` ? "default" : "ghost"}>Барлығы</Button>
                         </Link>
-                        {categories.map(item => (
+                        {categories && categories.map(item => (
                             <Link key={item.id} href={`/blog/category/${item.slug}`}>
                                 <Button variant={pathname === `/${locale}/blog/category/${item.slug}` ? "default" : "ghost"}>{item.name}</Button>
                             </Link>
                         ))}
                     </div>
                 </div>
-
+                
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     {/* Items */}
                     {blogs.map(item => {
@@ -37,7 +38,7 @@ export function BlogContainer({ blogs, categories }: BlogProps) {
                         })
                         return (
                             <Link
-                                href={`/blog/${item.id}`}
+                                href={`/blog/${item.id}`} 
                                 key={item.id} className="grid gap-4 p-4 transition-all hover:bg-secondary"
                             >
                                 <div className="flex justify-between items-center">
