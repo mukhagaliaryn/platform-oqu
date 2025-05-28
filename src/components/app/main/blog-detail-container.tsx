@@ -1,5 +1,5 @@
 import { BlogDetailProps } from "@/app/[locale]/(main)/blog/[id]/page";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 
@@ -25,12 +25,8 @@ export default function BlogDetailContainer({ blog }: BlogDetailProps) {
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
                         <BreadcrumbLink asChild>
-                            <Link href="/blog">{blog.category.name}</Link>
+                            <Link href={`/blog/category/${blog.category.slug}`}>{blog.category.name}</Link>
                         </BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator />
-                    <BreadcrumbItem>
-                        <BreadcrumbPage className="max-w-48 line-clamp-1">{blog.title}</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>

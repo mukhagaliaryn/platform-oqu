@@ -4,7 +4,19 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['127.0.0.1', 'oquplatforms.s3.amazonaws.com'], 
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+        port: '8000',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'oquplatforms.s3.amazonaws.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
