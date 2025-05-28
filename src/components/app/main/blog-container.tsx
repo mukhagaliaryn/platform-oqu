@@ -18,7 +18,7 @@ export function BlogContainer({ blogs, categories }: BlogProps) {
                 <div className="grid md:flex gap-4 justify-between">
                     <h1 className="text-2xl font-medium">Жаңалықтар.</h1>
 
-                    <ScrollArea className="max-w-sm sm:max-w-full">
+                    <ScrollArea className="max-w-xs sm:max-w-full">
                         <div className="flex gap-2 items-center">
                             <Link href={`/blog`}>
                                 <Button variant={pathname === `/${locale}/blog` ? "default" : "ghost"}>Барлығы</Button>
