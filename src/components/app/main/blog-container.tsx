@@ -1,6 +1,8 @@
 "use client"
+
 import { BlogProps } from "@/app/[locale]/(main)/blog/page"
 import { Button } from "@/components/ui/button";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl"
 import { usePathname } from "next/navigation";
@@ -12,20 +14,23 @@ export function BlogContainer({ blogs, categories }: BlogProps) {
 
     return (
         <>
-            <div className="max-w-screen-xl mx-auto py-8 md:py-16 px-4 md:px-0 grid gap-8">
-                <div className="flex justify-between">
+            <div className="max-w-screen-xl mx-auto py-8 md:py-16 px-4 grid gap-8">
+                <div className="grid md:flex gap-4 justify-between">
                     <h1 className="text-2xl font-medium">Жаңалықтар.</h1>
 
-                    <div className="flex gap-2 items-center">
-                        <Link href={`/blog`}>
-                            <Button variant={pathname === `/${locale}/blog` ? "default" : "ghost"}>Барлығы</Button>
-                        </Link>
-                        {categories.map(item => (
-                            <Link key={item.id} href={`/blog/category/${item.slug}`}>
-                                <Button variant={pathname === `/${locale}/blog/category/${item.slug}` ? "default" : "ghost"}>{item.name}</Button>
+                    <ScrollArea className="max-w-sm sm:max-w-full">
+                        <div className="flex gap-2 items-center">
+                            <Link href={`/blog`}>
+                                <Button variant={pathname === `/${locale}/blog` ? "default" : "ghost"}>Барлығы</Button>
                             </Link>
-                        ))}
-                    </div>
+                            {categories.map(item => (
+                                <Link key={item.id} href={`/blog/category/${item.slug}`}>
+                                    <Button variant={pathname === `/${locale}/blog/category/${item.slug}` ? "default" : "ghost"}>{item.name}</Button>
+                                </Link>
+                            ))}
+                        </div>
+                        <ScrollBar orientation="horizontal" />
+                    </ScrollArea>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

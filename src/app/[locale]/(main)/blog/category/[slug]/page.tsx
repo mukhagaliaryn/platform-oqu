@@ -1,4 +1,4 @@
-import { BlogCategoryContainer } from "@/components/app/main/blog-category-container";
+import { BlogContainer } from "@/components/app/main/blog-container";
 import MainLayout from "@/layouts/main-layout";
 import { notFound } from "next/navigation";
 
@@ -64,7 +64,7 @@ export default async function BlogCategoryPage({ params }: Props) {
 
     return (
         <MainLayout>
-            <BlogCategoryContainer category={category} categories={categories} blogs={blogs} />
+            <BlogContainer category={category} categories={categories} blogs={blogs} />
         </MainLayout>
     )
 }

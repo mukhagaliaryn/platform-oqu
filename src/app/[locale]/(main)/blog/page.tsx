@@ -22,6 +22,7 @@ type BlogCategory = {
 }
 
 export interface BlogProps {
+    category?: Blog
     blogs: Blog[]
     categories: BlogCategory[]
 }
